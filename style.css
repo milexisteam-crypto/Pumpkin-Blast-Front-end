@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap');
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* STRONA */
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: rgb(255, 255, 255);
+    font-family: 'Maven Pro', sans-serif;
+    overflow: hidden;
+}
+
+/* TAPETA */
+.wallpaper {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+    object-fit: cover; /* lepsze niż fill */
+    backdrop-filter: blur(20px);
+}
+
+/* SPINNER */
+.spinner {
+    width: 5vh;
+    height: 5vh;
+    border: 5px solid rgb(255, 255, 255);
+    border-top-color: transparent; /* blank */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* TEKSTY */
+h1 {
+    font-size: 7vw;
+    z-index: 1;
+}
+
+p {
+    font-size: 3vw;
+}
+
+/* DOLNY TEKST */
+.gr1 {
+    bottom: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1; /* poprawione, żeby było nad tapetą */
+}
+.filter1 {
+    z-index: 0;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    backdrop-filter: blur(20px);
+    background: rgba(0, 0, 0, 10.09);
+background: linear-gradient(180deg, rgba(0, 0, 0, 0.329) 0%, rgba(0, 0, 0, 0.842) 100%);
+}
